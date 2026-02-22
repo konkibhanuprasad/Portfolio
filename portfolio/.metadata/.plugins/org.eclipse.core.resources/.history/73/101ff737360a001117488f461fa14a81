@@ -1,0 +1,33 @@
+package com.portfolio.backend.serviceImpl;
+
+import org.springframework.stereotype.Service;
+import org.springframework.security.crypto.password.PasswordEncoder
+
+
+import com.portfolio.backend.entity.User;
+import com.portfolio.backend.repository.UserRepository;
+import com.portfolio.backend.service.UserService;
+
+@Service
+public class UserServiceImpl implements UserService{
+	
+	private final UserRepository userRepo;
+	private final PasswordEncoder passwordEncoder;
+	
+	public UserServiceImpl(UserRepository userRepository) {
+		this.userRepo = userRepository;
+	}
+
+	@Override
+	public User registerUser(User user) {
+		// TODO Auto-generated method stub
+		return userRepo.save(user);
+	}
+
+	@Override
+	public User findByUsername(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

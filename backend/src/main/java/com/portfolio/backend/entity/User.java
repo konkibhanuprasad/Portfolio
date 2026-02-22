@@ -11,9 +11,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "user")
+@Getter
+@Setter
 public class User {
 
 	@Id
@@ -27,12 +31,13 @@ public class User {
 	private String email;
 
 	@Column(nullable = false)
-	private String passwordHash;
+	private String password;
 
 	private String fullname;
 	private String bio;
 	private String profileImageUrl;
 	private long contactNumber;
+	private String role;
 
 	private LocalDateTime createdAt = LocalDateTime.now();
 

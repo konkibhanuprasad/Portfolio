@@ -1,0 +1,73 @@
+package com.portfolio.backend.serviceImpl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.portfolio.backend.dto.ProjectDTO;
+import com.portfolio.backend.entity.Project;
+import com.portfolio.backend.mapper.ProjectMapper;
+import com.portfolio.backend.repository.ProjectRepository;
+import com.portfolio.backend.service.ProjectService;
+
+@Service
+public class ProjectServiceImpl implements ProjectService {
+
+	private final ProjectRepository projectRepository;
+
+	public ProjectServiceImpl(ProjectRepository projectRepository) {
+		this.projectRepository = projectRepository;
+	}
+
+	@Override
+	public Project createProject(Project project) {
+		// TODO Auto-generated method
+		return projectRepository.save(project);
+	}
+
+	@Override
+	public List<ProjectDTO> getAllProjects() {
+		List<Project> projects = projectRepository.findAll();
+		return projects.stream()
+		.map(ProjectMapper::toDTO).toList();
+	}
+
+	@Override
+	public Project getProjectById(Long id) {
+		return projectRepository.findById(id).orElseThrow(() -> new RuntimeException("Project not found"));
+	}
+
+	@Override
+	public List<Project> searchProjectByTitle(String title) {
+		return projectRepository.findByTitleContainingIgnoreCase(title);
+	}
+
+	@Override
+	public List<Project> getProjectSortBydate() {
+		// TODO Auto-generated method stub
+		// List<Project> projects = projectRepository.findAll();
+
+		// projects.sort(Comparator.comparing(Project::getStartDate).reversed());
+		return projectRepository.findAllByOrderByTitleAsc();
+	}
+
+	@Override
+	public Project updateProject(Long id, Project updateProject) {
+		// TODO Auto-generated method stub
+		Project project = getProjectById(id);
+
+		project.setTitle(updateProject.getTitle());
+		project.setDescription(updateProject.getDescription());
+		project.setCreatedAt(project.getCreatedAt());
+		project.setSourcecodeurl(updateProject.getSourcecodeurl());
+		return projectRepository.save(project);
+	}
+
+	@Override
+	public void deleteProject(Long id) {
+		// TODO Auto-generated method stub
+		projectRepository.deleteById(id);
+
+	}
+
+}

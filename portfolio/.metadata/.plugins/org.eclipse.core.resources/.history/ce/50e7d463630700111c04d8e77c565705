@@ -1,0 +1,20 @@
+package com.portfolio.backend.controller;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.portfolio.backend.entity.PastEmployement;
+import com.portfolio.backend.service.PastEmployementService;
+
+@RequestMapping
+public class PastEmployementController {
+	
+	private PastEmployementService pastEmpService;
+
+	@PostMapping("api/pastEmp")
+	public PastEmployement create(@PathVariable PastEmployement pastEmployement) {
+		return pastEmpService.createEmployement(pastEmployement);
+	}
+	
+}

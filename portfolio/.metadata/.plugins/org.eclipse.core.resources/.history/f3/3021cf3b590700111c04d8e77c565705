@@ -1,0 +1,46 @@
+package com.portfolio.backend.serviceImpl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.portfolio.backend.entity.PastEmployement;
+import com.portfolio.backend.repository.PastEmployementRepository;
+import com.portfolio.backend.service.PastEmployementService;
+
+@Service
+public class PastEmployementServiceImpl implements PastEmployementService{
+	
+	private PastEmployementRepository pastEmpRepo;
+	
+	public PastEmployementServiceImpl(PastEmployementRepository empRepo) {
+		this.pastEmpRepo = empRepo;
+	}
+
+	@Override
+	public PastEmployement createEmployement(PastEmployement employement) {
+		// TODO Auto-generated method stub
+		return pastEmpRepo.save(employement);
+	}
+
+	@Override
+	public List<PastEmployementService> getEmployementTimeLine() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<PastEmployementService> searchByCompany() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteEmployement(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	
+}

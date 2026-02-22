@@ -1,0 +1,24 @@
+package com.portfolio.backend.serviceImpl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.portfolio.backend.repository.PastEmployement;
+
+@Service
+public class PastEmployementServiceImpl implements PastEmployementService{
+
+	@Override
+	public List<PastEmployement> findAllOrderByStartDate() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<PastEmployement> findCompanyName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

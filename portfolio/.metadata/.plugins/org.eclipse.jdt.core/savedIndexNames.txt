@@ -18,7 +18,6 @@ INDEX VERSION 1.134+C:\Portfolio-Management\portfolio\.metadata\.plugins\org.ecl
 1865797976.index
 1239883957.index
 4156574831.index
-3954003759.index
 822592180.index
 2848287708.index
 3820482987.index
@@ -30,8 +29,8 @@ INDEX VERSION 1.134+C:\Portfolio-Management\portfolio\.metadata\.plugins\org.ecl
 4201299820.index
 3420736860.index
 2352566571.index
-3143108698.index
 446221636.index
+3143108698.index
 440865431.index
 3740584458.index
 1210725366.index
@@ -55,8 +54,8 @@ INDEX VERSION 1.134+C:\Portfolio-Management\portfolio\.metadata\.plugins\org.ecl
 452380344.index
 1448579433.index
 1598559680.index
-454200212.index
 3591940559.index
+454200212.index
 1418498875.index
 3271284963.index
 1396278486.index
@@ -74,9 +73,9 @@ INDEX VERSION 1.134+C:\Portfolio-Management\portfolio\.metadata\.plugins\org.ecl
 3168675721.index
 2542838094.index
 3945798932.index
-399595192.index
-3048303995.index
 1831541123.index
+3048303995.index
+399595192.index
 3071294665.index
 3326271286.index
 3995676143.index
@@ -99,6 +98,7 @@ INDEX VERSION 1.134+C:\Portfolio-Management\portfolio\.metadata\.plugins\org.ecl
 1436487139.index
 1275605050.index
 3946020120.index
+3785753399.index
 2224571706.index
 3376082190.index
 1226260663.index
@@ -124,6 +124,6 @@ INDEX VERSION 1.134+C:\Portfolio-Management\portfolio\.metadata\.plugins\org.ecl
 3392778096.index
 3212489581.index
 4210277863.index
-3230861914.index
-3419810776.index
 2369350392.index
+3419810776.index
+3230861914.index

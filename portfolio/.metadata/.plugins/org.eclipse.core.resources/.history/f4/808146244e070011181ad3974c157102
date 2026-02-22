@@ -1,0 +1,21 @@
+package com.portfolio.backend.serviceImpl;
+
+import java.util.List;
+
+import com.portfolio.backend.repository.PastEmployement;
+
+public class PastEmployementServiceImpl implements PastEmployement{
+
+	@Override
+	public List<PastEmployement> findAllOrderByStartDate() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<PastEmployement> findCompanyName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

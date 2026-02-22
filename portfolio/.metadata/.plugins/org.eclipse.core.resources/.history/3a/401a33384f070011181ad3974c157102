@@ -1,0 +1,15 @@
+package com.portfolio.backend.service;
+
+import java.util.List;
+
+public interface PastEmployement {
+	
+	PastEmployement createEmployement(PastEmployement employent);
+	
+	List<PastEmployement> getEmployementTimeLine9();
+	
+	List<PastEmployement> searchByCompany();
+	
+	void deleteEmployement(Long id);
+
+}

@@ -1,0 +1,36 @@
+package com.portfolio.backend.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.portfolio.backend.entity.PastEmployement;
+import com.portfolio.backend.service.PastEmployementService;
+
+@RequestMapping("api/pastEmp")
+public class PastEmployementController {
+	
+	@Autowired
+	private PastEmployementService pastEmpService;
+
+	@PostMapping
+	public PastEmployement create(@PathVariable PastEmployement pastEmployement) {
+		return pastEmpService.createEmployement(pastEmployement);
+	}
+	
+	@GetMapping
+	public List<PastEmployement> empTimeLine() {
+		return pastEmpService.getEmployementTimeLine();
+	}
+	
+	@PutMapping("api/pastEmp/{company}")
+	public List<PastEmployement> searchByCompany(@PathVariable String company){
+		return pastEmpService.searchByCompany(company);
+	}
+	
+}

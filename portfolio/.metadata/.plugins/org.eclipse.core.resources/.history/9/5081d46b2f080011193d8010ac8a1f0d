@@ -1,0 +1,17 @@
+package com.portfolio.backend.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.portfolio.backend.entity.PastEmployement;
+
+@Repository
+public interface PastEmployementRepository extends JpaRepository<PastEmployement, Long> {
+
+	List<PastEmployement> findAllOrderByStartDate();
+
+	List<PastEmployement> findCompanyName(String name);
+
+}

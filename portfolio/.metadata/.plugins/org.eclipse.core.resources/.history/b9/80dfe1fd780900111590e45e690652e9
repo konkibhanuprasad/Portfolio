@@ -1,0 +1,5 @@
+package com.portfolio.backend.serviceImpl;
+
+public class SkillServiceImpl {
+
+}
